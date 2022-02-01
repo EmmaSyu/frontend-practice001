@@ -2,6 +2,8 @@
 
 This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62).
 
+Stats preview card component solution.[連結](https://emmasyu.github.io/frontend-practice001/)
+
 ### 還不熟悉的地方
 
 - Flexbox 排版(對齊、縮放)
