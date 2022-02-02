@@ -38,19 +38,26 @@ body {
   background-color: var(--main-bg-clr);
 }
 
-.card-container {
-  width: 111rem;
+.section {
+  width: 100%;
   height: 100vh;
-  margin: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  max-width: 111rem;
+  min-height: 45rem;
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: 51.351351% 48.648648%;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .card-left {
   background-color: var(--card-bg-clr);
-  border-radius: 10px 0px 0px 10px;
-  width: 57rem;
-  height: 45rem;
   padding: 7rem;
   display: flex;
   flex-direction: column;
@@ -68,16 +75,18 @@ body {
 
 .description {
   line-height: 24px;
-  letter-spacing: 1px;
   color: var(--m-white-trn-clr);
 }
 
 .stats {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 .stats-item {
   margin-right: 6rem;
+  padding-top: 3rem;
 }
 
 .stats-data {
@@ -90,24 +99,24 @@ body {
   font-family: var(--font-family-stat-h);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);
-  text-transform: uppercase;
   color: var(--s-white-trn-clr);
+  text-transform: uppercase;
 }
 
 .card-right {
-  height: 45rem;
-  border-radius: 0px 10px 10px 0px;
-  overflow: hidden;
 }
 
 .image-overlay {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
 img {
   width: 100%;
-  height: 45rem;
+  height: 100%;
   object-fit: cover;
+  object-position: right;
 }
 
 .image-overlay::before {
@@ -121,7 +130,7 @@ img {
   mix-blend-mode: multiply;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 775px) {
   .order-1 {
     order: 1;
   }
@@ -131,15 +140,14 @@ img {
   }
 
   .card-container {
-    width: 32.5rem;
+    max-width: initial;
+    min-height: initial;
+    margin: 2rem;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
   }
 
   .card-left {
-    border-radius: 0px 0px 10px 10px;
-    width: 32.5rem;
-    height: 54rem;
     padding: 3rem;
     align-items: center;
   }
@@ -162,15 +170,10 @@ img {
   .stats-item {
     margin-right: initial;
     text-align: center;
-    margin-top: 3rem;
-  }
-
-  .card-right {
-    height: 24rem;
-    border-radius: 10px 10px 0px 0px;
+    margin-top: 2rem;
   }
 
   img {
-    height: 24rem;
+    object-position: bottom;
   }
 }
