@@ -139,6 +139,10 @@ img {
     order: 2;
   }
 
+  .section {
+    margin: 8rem 0rem;
+  }
+
   .card-container {
     max-width: initial;
     min-height: initial;
